@@ -39,6 +39,7 @@ public class CompanyResource {
     @GetMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
         companyService.delete(id);
+        System.out.println("test");
         return ResponseEntity.ok("O'chirildi");
     }
 }
