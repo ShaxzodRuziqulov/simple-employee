@@ -2,9 +2,11 @@ package com.example.springemployee.domain;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-@Table(name = "TaskEmployee")
-public class TaskEmployee {
+@Table(name = "task_employee")
+public class TaskEmployee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
