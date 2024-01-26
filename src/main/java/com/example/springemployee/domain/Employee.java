@@ -1,5 +1,6 @@
 package com.example.springemployee.domain;
 
+import com.example.springemployee.domain.enumetion.Status;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -21,7 +22,8 @@ public class Employee implements Serializable {
     private String workSchedule;
     @Column(name = "year_of_birth")
     private String yearOfBirth;
-
+    @Enumerated()
+    private Status status;
     @Column(name = "graduated_university")
     private String graduatedUniversity;
 
@@ -31,6 +33,14 @@ public class Employee implements Serializable {
 
     public Long getId() {
         return id;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     public String getFirstName() {

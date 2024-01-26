@@ -3,11 +3,7 @@ package com.example.springemployee.domain.request;
 public class ReqTask {
     private Long id;
     private String name;
-
-    public ReqTask(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    private Long company;
 
     public Long getId() {
         return id;
@@ -23,5 +19,13 @@ public class ReqTask {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getCompany() {
+        return company;
+    }
+
+    public void setCompany(Long company) {
+        this.company = company;
     }
 }

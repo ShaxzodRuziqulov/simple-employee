@@ -21,8 +21,8 @@ public class CompanyResource {
         String response = companyService.createCompany(reqCompany);
         return ResponseEntity.ok(response);
     }
-    @PutMapping("/update/{id}")
-    public ResponseEntity<?> updateCompany(@PathVariable ReqCompany reqCompany){
+    @PutMapping("/update")
+    public ResponseEntity<?> updateCompany(@RequestBody ReqCompany reqCompany){
         String response = companyService.updateCompany(reqCompany);
         return ResponseEntity.ok(response);
     }
@@ -39,7 +39,6 @@ public class CompanyResource {
     @GetMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
         companyService.delete(id);
-        System.out.println("test");
         return ResponseEntity.ok("O'chirildi");
     }
 }
